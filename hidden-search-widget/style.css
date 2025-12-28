@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.search {
+  position: relative;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.search .input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 20px;
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+.search .input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.input:focus,
+.btn:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.search.active .btn {
+  transform: translateX(205px);
+  background: #fff;
+  color: #7158e2;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
